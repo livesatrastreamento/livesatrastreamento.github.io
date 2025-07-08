@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <title>LIVE SAT RASTREAMENTO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <style>
+    @font-face {
+      font-family: 'LiveSat';
+      src: url('assets/livesat.ttf') format('truetype');
+    }
+
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'LiveSat', Helvetica, Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+      text-transform: uppercase;
+    }
+       @media (max-width: 600px) {
+      header h1 {
+        text-align: center;
+        font-size: 18px;
+        color: #000;
+      }
+    }
+
+    #bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      opacity: 0.3;
+    }
+    header {
+      background-color: #ffc209;
+      padding: 20px;
+      text-align: center;
+    }
+    h2 {
+      text-align: center;
+      margin-top: 20px;
+      color: #ffc209;
+      text-shadow: 0 0 5px #000;
+    }
+
+    .swiper {
+      width: 100%;
+      padding-top: 25px;
+      padding-bottom: 0px;
+    }
+
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 300px;
+      height: 300px;
+    }
+
+    /* .plano:hover,
+    .plano:hover img,
+    .produto:hover,
+    .produto:hover img {
+      transform: scale(1.05);
+      filter: drop-shadow(10px 0px 30px #ffc209);
+    } */
+
+    .plano,
+    .produto {
+      background-color: rgba(0, 0, 0, 0.7);
+      border: 2px solid #ffc209;
+      border-radius: 10px;
+      padding: 10px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      width: 80;
+    }
+
+    .plano img,
+    .produto img {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .plano h3,
+    .produto h3 {
+      margin: 10px 0 5px;
+      color: #ffc209;
+    }
+
+    .plano p,
+    .produto p {
+      margin: 0;
+    }
+
+    .swiper-pagination {
+      margin-top: 10px;
+    }
+    .botao-whatsapp {
+      display: inline-block;
+      margin-top: 40px;
+      margin-left: 25px;
+      padding: 12px 20px;
+      background-color: #ffc209;
+      color: #000;
+      border: none;
+      border-radius: 20px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s, transform 0.3s;
+      width: 80%;
+      max-width: 300px;
+
+    }
+
+    .botao-whatsapp:hover {
+      background-color: #e6ae00;
+      transform: scale(1.05);
+      animation: brilhoWhatsapp 1s forwards;
+    }
+
+    @keyframes brilhoWhatsapp {
+      0% {
+        filter: drop-shadow(0 0 2px #ffc209);
+      }
+
+      30% {
+        filter: drop-shadow(0 0 6px #ffdc6e);
+      }
+
+      60% {
+        filter: drop-shadow(0 0 10px #fff3cc);
+      }
+
+      100% {
+        filter: drop-shadow(0 0 15px #ffffff);
+      }
+      
+    }
+    .botao-whatsapp {
+        font-size: 16px;
+        padding: 10px 15px;
+        text-align: center;
+        align-items: center;
+      }
+          footer {
+      background-color: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1><img style="width: 30px;height:50%;min-height: 30px; margin-top: 1px; position: relative;" src="assets/logo.png">LIVE SAT RASTREAMENTO 24H</h1>
+    <p>RASTREADORES COM BLOQUEIO - PESSOAL OU EMPRESARIAL</p>
+  </header>
+  <!-- Vídeo de fundo -->
+  <video autoplay muted loop id="bg-video">
+    <source src="assets/background.webm" type="video/mp4">
+    Seu navegador não suporta vídeo em HTML5.
+  </video>
+
+  <!-- Swiper de Planos -->
+  <h2>Planos</h2>
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div style="height: 55%;" class="plano" onclick="window.open('https://wa.me/553182829723?text=Estou%20interessado%20no%20plano%20de%20MOTO%20de%20R$%2035,90', '_blank')">
+          <img src="assets/moto.png" alt="Moto">
+          <h3>MOTO</h3>
+          <p>R$ 35,90 / MÊS</p>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div style="height: 55%;" class="plano" onclick="window.open('https://wa.me/553182829723?text=Estou%20interessado%20no%20plano%20de%20CARRO%20de%20R$%2039,90', '_blank')">
+          <img style="height: 55%; width:120%" src="assets/carro2.png" alt="Carro">
+          <h3>CARRO</h3>
+          <p>R$ 39,90 / MÊS</p>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div style="height: 60%;" class="plano" onclick="window.open('https://wa.me/553182829723?text=Estou%20interessado%20no%20plano%20de%20CAMINHÃO%20de%20R$%2049,90', '_blank')">
+          <img style="height:50%" src="assets/truck.png" alt="Caminhão">
+          <h3>CAMINHÃO</h3>
+          <p>R$ 49,90 / MÊS</p>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div style="height: 55%;" class="plano" onclick="window.open('https://wa.me/553182829723?text=Estou%20interessado%20no%20plano%20de%20JET-SKI%20de%20R$%2055,90', '_blank')">
+          <img style="height: 55%; width:120%" src="assets/jetski.png" alt="Jet Ski">
+          <h3>JET SKI</h3>
+          <p>R$ 55,90 / MÊS</p>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Swiper de Produtos -->
+  <h2>Produtos</h2>
+  <div class="swiper mySwiper2">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div style="height: 80%;" class="produto" onclick="window.open('https://wa.me/553182829723?text=Gostaria%20de%20comprar%20o%20RASTREADOR', '_blank')">
+          <img src="assets/produtos/rastreador.png" alt="Rastreador">
+          <h3>Rastreador</h3>
+          <p>R$ 189,00</p>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div style="height: 80%;" class="produto" onclick="window.open('https://wa.me/553182829723?text=Gostaria%20de%20comprar%20a%20WEB%20TAG', '_blank')">
+          <img src="assets/produtos/webtga.png" alt="Web Tag">
+          <h3>Web Tag</h3>
+          <p>R$ 139,00</p>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div style="height: 80%;" class="produto" onclick="window.open('https://wa.me/553182829723?text=Estou%20interessado%20na%20Coleira+Tag%20de%20R$%20159,00%20(R$19,00%20mensais)', '_blank')">
+          <img style="height: 50%;" src="assets/produtos/coleira+tag.png" alt="Coleira e Tag">
+          <h3>Coleira + Tag</h3>
+          <p>R$ 159,00 ou <span style="font-size: 0.9em;">(R$19,00 mensais)</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+     
+  </div>
+   <div>
+        <a class="botao-whatsapp" onclick="window.open('https://wa.me/553182829723?text=Vim%20Pelo%20Site','_blank')">FALAR NO WHATSAPP</a>
+      </div>
+   <section style="text-align: center; margin-top: 20px;">
+      <h2>VANTAGENS</h2>
+      <p>LOCALIZAÇÃO E BLOQUEIO EM TEMPO REAL</p>
+      <p>ATENDIMENTO 0800 24 HORAS (A CONTRATAR)</p>
+      <p>ALERTAS DE SEGURANÇA - HISTÓRICO DE ROTAS</p>
+    </section>
+  </div>
+
+  <footer>
+    <p>FALE CONOSCO PELO WHATSAPP: <span class="whatsapp">(31) 98282-9723 / (31) 99440-3372</span></p>
+    <p>© 2025 LIVE SAT RASTREAMENTO</p>
+</footer>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Inicializar Swipers -->
+  <script>
+    new Swiper(".mySwiper", {
+      effect: "coverflow",
+      initialSlide: 1.5,
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "3",
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 0.5,
+        slideShadows: false,
+      },
+      pagination: {
+        el: ".mySwiper .swiper-pagination",
+      },
+    });
+
+    new Swiper(".mySwiper2", {
+      effect: "coverflow",
+      initialSlide: 1,
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "3",
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 0.5,
+        slideShadows: false,
+      },
+      pagination: {
+        el: ".mySwiper2 .swiper-pagination",
+      },
+    });
+  </script>
+</body>
+
+</html>

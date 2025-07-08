@@ -1,0 +1,187 @@
+<html lang="pt-BR"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LIVE SAT RASTREAMENTO</title>
+  <style>
+    @font-face {
+      font-family: 'LiveSat';
+      src: url('assets/livesat.ttf') format('truetype');
+    }
+
+    body {
+      margin: 0;
+      font-family: 'LiveSat', Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+      text-transform: uppercase;
+    }
+
+    header {
+      background-color: #ffc209;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      color: #000;
+      margin: 0;
+      font-size: 22px;
+    }
+
+    section {
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    .planos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .plano {
+      background: #1a1a1a;
+      border: 2px solid #ffc209;
+      border-radius: 10px;
+      padding: 20px;
+      width: 200px;
+      height: 220px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .plano img {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 10px;
+      transition: transform 0.3s, filter 0.3s;
+    }
+
+    .plano:hover,
+    .plano:hover img {
+      transform: scale(1.05);
+      filter: drop-shadow(10px 0px 30px);
+    }
+
+    .plano h3 {
+      color: #ffc209;
+      font-size: 18px;
+    }
+
+    .plano p {
+      font-size: 16px;
+    }
+
+    .botao-whatsapp {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 12px 20px;
+      background-color: #ffc209;
+      color: #000;
+      border: none;
+      border-radius: 20px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s, transform 0.3s;
+      width: 80%;
+      max-width: 300px;
+    }
+
+    .botao-whatsapp:hover {
+      background-color: #e6ae00;
+      transform: scale(1.05);
+      animation: brilhoWhatsapp 1s forwards;
+    }
+
+    @keyframes brilhoWhatsapp {
+      0% { filter: drop-shadow(0 0 2px #ffc209); }
+      30% { filter: drop-shadow(0 0 6px #ffdc6e); }
+      60% { filter: drop-shadow(0 0 10px #fff3cc); }
+      100% { filter: drop-shadow(0 0 15px #ffffff); }
+    }
+
+    footer {
+      background-color: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    .whatsapp {
+      color: #25D366;
+      font-weight: bold;
+    }
+
+    /* Responsivo para telas menores */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 18px;
+      }
+
+      .plano {
+        width: 100%;
+        max-width: none;
+        max-height: none
+      }
+
+      .plano img {
+        width: 80px;
+        height: 300px;
+      }
+
+      .botao-whatsapp {
+        font-size: 16px;
+        padding: 10px 15px;
+      }
+
+      section {
+        padding: 20px 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+
+  <section>
+    <h2>Produtos</h2>
+    <div class="planos">
+      <div class="plano" onclick="window.open('https://wa.me/553182829723?text=Estou%20interessado%20no%20plano%20de%20Rastreador%20de%20R$%20189,00', '_blank')">
+        <img src="assets/produtos/rastreador.png" alt="Rastreador">
+        <h3>Rastreador - Instalado com Cabo Bloqueio</h3>
+        <p>R$ 189,00</p>
+      </div>
+
+      <div class="plano" onclick="window.open('https://wa.me/553182829723?text=Estou%20interessado%20no%20plano%20de%20WEBTag%20de%20R$%20139,00', '_blank')">
+        <img src="assets/produtos/webtga.png" alt="Web Tag">
+        <h3>Web Tag</h3>
+        <p>R$ 139,00</p>
+      </div>
+
+      <div class="plano" onclick="window.open('https://wa.me/553182829723?text=Estou%20interessado%20no%20plano%20de%20Coleira+Tag%20de%20R$%20159,00', '_blank')">
+        <img src="assets/produtos/coleira+tag.png" alt="Coleira e Tag">
+        <h3>Coleira + Tag</h3>
+        <p>R$ 159,00 Plano 19 Mensal</p>
+      </div>
+    </div>
+
+    <div>
+      <a class="botao-whatsapp" href="https://wa.me/553182829723" target="_blank">FALAR NO WHATSAPP</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>VANTAGENS</h2>
+    <p>LOCALIZAÇÃO E BLOQUEIO EM TEMPO REAL</p>
+    <p>ATENDIMENTO 0800 24 HORAS</p>
+    <p>ALERTAS DE SEGURANÇA - HISTÓRICO DE ROTAS</p>
+  </section>
+
+  <footer>
+    <p>FALE CONOSCO PELO WHATSAPP: <span class="whatsapp">(31) 8282-9723</span></p>
+    <p>© 2025 LIVE SAT RASTREAMENTO</p>
+  </footer>
+
+
+</body></html>

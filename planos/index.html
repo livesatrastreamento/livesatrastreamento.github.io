@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Planos</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'LiveSat', Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+      text-transform: uppercase;
+    }
+
+    header {
+      background-color: #ffc209;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      color: #000;
+      margin: 0;
+      font-size: 22px;
+    }
+
+    section {
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    .planos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .plano {
+      background: #1a1a1a;
+      border: 2px solid #ffc209;
+      border-radius: 10px;
+      padding: 20px;
+      width: 200px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .plano img {
+      width: 100%;
+      object-fit: contain;
+      margin-bottom: 10px;
+      transition: transform 0.3s, filter 0.3s;
+    }
+
+    .plano:hover,
+    .plano:hover img {
+      transform: scale(1.05);
+      filter: drop-shadow(10px 0px 30px);
+    }
+
+    .plano h3 {
+      color: #ffc209;
+      font-size: 18px;
+    }
+
+    .plano p {
+      font-size: 16px;
+    }
+
+    .botao-whatsapp {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 12px 20px;
+      background-color: #ffc209;
+      color: #000;
+      border: none;
+      border-radius: 20px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s, transform 0.3s;
+      width: 80%;
+      max-width: 300px;
+    }
+
+    .botao-whatsapp:hover {
+      background-color: #e6ae00;
+      transform: scale(1.05);
+      animation: brilhoWhatsapp 1s forwards;
+    }
+
+    @keyframes brilhoWhatsapp {
+      0% { filter: drop-shadow(0 0 2px #ffc209); }
+      30% { filter: drop-shadow(0 0 6px #ffdc6e); }
+      60% { filter: drop-shadow(0 0 10px #fff3cc); }
+      100% { filter: drop-shadow(0 0 15px #ffffff); }
+    }
+
+    footer {
+      background-color: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    .whatsapp {
+      color: #25D366;
+      font-weight: bold;
+    }
+
+    #bg-video {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: 50%;
+      height: auto;
+      transform: translate(-50%, -50%);
+      object-fit: center;
+      z-index: -1;
+      opacity: 0.3;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 18px;
+      }
+
+      .plano {
+        width: 100%;
+        max-width: 350px;
+      }
+
+      .plano img {
+        max-height: 100px;
+      }
+
+      .botao-whatsapp {
+        font-size: 16px;
+        padding: 10px 15px;
+      }
+
+      section {
+        padding: 20px 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Vídeo de fundo opcional -->
+  <video id="bg-video" autoplay muted loop>
+    <source src="video.mp4" type="video/mp4">
+  </video>
+
+  <header>
+    <h1>Qual plano atende suas necessidades?</h1>
+  </header>
+
+  <section>
+    <div class="planos">
+      <div class="plano">
+        <!-- <img src="img1.png" alt="Plano 1"> -->
+        <h3>Plano Básico</h3>
+        <p>Ideal para iniciantes.</p>
+      </div>
+      <div class="plano">
+        <!-- <img src="img2.png" alt="Plano 2"> -->
+        <h3>Plano Intermediário</h3>
+        <p>Mais recursos para você.</p>
+      </div>
+      <div class="plano">
+        <!-- <img src="img3.png" alt="Plano 3"> -->
+        <h3>Plano Premium</h3>
+        <p>Para quem quer tudo.</p>
+      </div>
+    </div>
+
+    <a class="botao-whatsapp" href="https://wa.me/553182829723" target="_blank">
+      Fale no WhatsApp
+    </a>
+  </section>
+
+  <footer>
+    &copy; 2025 - Todos os direitos reservados | <span class="whatsapp"><a href="https://wa.me/553182829723" class="whatsapp" style="text-decoration: none">Contato via WhatsApp</span>
+  </footer>
+
+</body>
+</html>
